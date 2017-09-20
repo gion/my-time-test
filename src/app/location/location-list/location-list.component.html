@@ -1,0 +1,6 @@
+<h2 class="title">Please choose a Location</h2>
+<ul class="content">
+  <li *ngFor="let location of locations">
+      <a routerLink="/locations/{{location.id}}" routerLinkActive="active">{{location.city}}</a>
+  </li>
+</ul>
