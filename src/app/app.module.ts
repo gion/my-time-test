@@ -1,11 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
+
+import { ProxyService } from './shared';
 
 import { AppComponent } from './app.component';
 import { NothingComponent } from './nothing';
-import { LocationListComponent, LocationItemComponent } from './location';
-import { ServiceListComponent, ServiceItemComponent } from './service';
+import {
+  LocationService,
+  LocationListComponent,
+  LocationItemComponent } from './location';
+import {
+  ServiceListComponent,
+  ServiceItemComponent } from './service';
 
 const appRoutes: Routes = [
   {
@@ -49,9 +57,13 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    ProxyService,
+    LocationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
