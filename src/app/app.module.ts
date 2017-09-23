@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NothingComponent } from './nothing';
-import { LocationListComponent } from './location';
+import { LocationListComponent, LocationItemComponent } from './location';
+import { ServiceListComponent, ServiceItemComponent } from './service';
 
 const appRoutes: Routes = [
   {
@@ -21,13 +22,13 @@ const appRoutes: Routes = [
     component: LocationListComponent,
     data: { title: 'Select a location!' }
   },
+  {
+    path: 'locations/:locationId/services',
+    component: ServiceListComponent,
+    data: { title: 'Select a service!' }
+  },
   // {
-  //   path: 'locations/:id',
-  //   component: AppComponent,
-  //   data: { title: 'Select a location!' }
-  // },
-  // {
-  //   path: 'locations',
+  //   path: 'locations/:locationId/services/:serviceId',
   //   component: AppComponent,
   //   data: { title: 'Select a location!' }
   // },
@@ -38,7 +39,10 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NothingComponent,
-    LocationListComponent
+    LocationListComponent,
+    LocationItemComponent,
+    ServiceListComponent,
+    ServiceItemComponent
   ],
   imports: [
     BrowserModule,
