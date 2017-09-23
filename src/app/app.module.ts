@@ -12,6 +12,7 @@ import {
   LocationListComponent,
   LocationItemComponent } from './location';
 import {
+  ServiceService,
   ServiceListComponent,
   ServiceItemComponent } from './service';
 
@@ -62,7 +63,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     ProxyService,
-    LocationService
+    LocationService,
+    ServiceService
   ],
   bootstrap: [AppComponent]
 })
