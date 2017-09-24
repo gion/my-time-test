@@ -15,6 +15,10 @@ import {
   ServiceService,
   ServiceListComponent,
   ServiceItemComponent } from './service';
+import {
+  VariationService,
+  VariationListComponent,
+  VariationItemComponent } from './variation';
 
 const appRoutes: Routes = [
   {
@@ -51,7 +55,9 @@ const appRoutes: Routes = [
     LocationListComponent,
     LocationItemComponent,
     ServiceListComponent,
-    ServiceItemComponent
+    ServiceItemComponent,
+    VariationListComponent,
+    VariationItemComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,8 @@ const appRoutes: Routes = [
   providers: [
     ProxyService,
     LocationService,
-    ServiceService
+    ServiceService,
+    VariationService
   ],
   bootstrap: [AppComponent]
 })
