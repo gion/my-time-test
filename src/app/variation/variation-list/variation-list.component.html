@@ -1,3 +1,6 @@
-<p>
-  variation-list works!
-</p>
+<h2 class="title">Please choose a Variation</h2>
+<ul class="content">
+  <li *ngFor="let variation of variations">
+      <variation-item [variation]=variation></variation-item>
+  </li>
+</ul>

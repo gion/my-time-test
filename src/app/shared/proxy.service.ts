@@ -12,7 +12,7 @@ export class ProxyService {
   constructor(private http: Http) {}
 
   private convertUrl(url:string): string {
-    return `${this.proxyBase}?url=${url}`;
+    return `${this.proxyBase}?url=${encodeURIComponent(url)}`;
   }
 
   private log(message:any, level:number=0): void {

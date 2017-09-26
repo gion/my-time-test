@@ -40,11 +40,11 @@ const appRoutes: Routes = [
     component: ServiceListComponent,
     data: { title: 'Select a service!' }
   },
-  // {
-  //   path: 'locations/:locationId/services/:serviceId',
-  //   component: AppComponent,
-  //   data: { title: 'Select a location!' }
-  // },
+  {
+    path: 'locations/:locationId/services/:serviceId/variations',
+    component: VariationListComponent,
+    data: { title: 'Select a variation!' }
+  },
   // { path: '**', component: AppComponent }
 ];
 
