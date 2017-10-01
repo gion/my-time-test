@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { LocationModel } from '../location.model'
 
@@ -7,15 +7,10 @@ import { LocationModel } from '../location.model'
   templateUrl: './location-item.component.html',
   styleUrls: ['./location-item.component.css']
 })
-export class LocationItemComponent implements OnInit {
+export class LocationItemComponent {
 
   @Input()
   location:LocationModel
 
   constructor() { }
-
-  ngOnInit() {
-    console.log(this.location)
-  }
-
 }

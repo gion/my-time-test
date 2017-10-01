@@ -1,3 +1,6 @@
+import locationMocks from './mocks';
+
+export { locationMocks };
 export { LocationModel } from './location.model';
 export { LocationService } from './location.service';
 export { LocationItemComponent } from './location-item/location-item.component';
