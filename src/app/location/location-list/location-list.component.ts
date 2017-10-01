@@ -13,6 +13,8 @@ const locations = [{"id":39016,"company_id":40426,"street_address":"15 W Lomen A
 })
 
 export class LocationListComponent implements OnInit {
+
+  shouldShowLoader:boolean = true;
   locations:LocationModel[];
 
   constructor(private locationService: LocationService) {}
@@ -20,6 +22,9 @@ export class LocationListComponent implements OnInit {
   ngOnInit() {
     this.locationService
       .get(companyId)
-      .subscribe(l => this.locations = l)
+      .subscribe(l => {
+        this.locations = l;
+        this.shouldShowLoader = false;
+      })
   }
 }

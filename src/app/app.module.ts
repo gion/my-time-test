@@ -3,6 +3,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
+import {
+  MdProgressSpinnerModule,
+  MdButtonModule,
+  MdListModule,
+  MatCardModule
+ } from '@angular/material';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import { ProxyService } from './shared';
 
 import { AppComponent } from './app.component';
@@ -65,8 +74,14 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MdProgressSpinnerModule,
+    MdButtonModule,
+    MdListModule,
+    MatCardModule
   ],
+  exports: [],
   providers: [
     ProxyService,
     LocationService,

@@ -1,6 +1,9 @@
 <h2 class="title">Please choose a Variation</h2>
-<ul class="content">
-  <li *ngFor="let variation of variations">
-      <variation-item [variation]=variation></variation-item>
-  </li>
-</ul>
+<md-nav-list class="content">
+    <variation-item
+      *ngFor="let variation of variations"
+      [variation]=variation>
+    </variation-item>
+</md-nav-list>
+<md-spinner *ngIf="shouldShowLoader"></md-spinner>
+

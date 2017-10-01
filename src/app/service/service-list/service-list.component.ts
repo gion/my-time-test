@@ -12,6 +12,7 @@ import { ServiceModel } from '../service.model'
 })
 export class ServiceListComponent implements OnInit {
 
+  shouldShowLoader:boolean = true;
   services: ServiceModel[]
 
   constructor(private serviceService: ServiceService) { }
@@ -19,7 +20,10 @@ export class ServiceListComponent implements OnInit {
   ngOnInit() {
     this.serviceService
       .get(companyId)
-      .subscribe(s => this.services = s);
+      .subscribe(s => {
+        this.shouldShowLoader = false;
+        this.services = s;
+      });
   }
 
 }

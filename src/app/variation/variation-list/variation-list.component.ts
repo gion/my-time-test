@@ -13,6 +13,8 @@ import { VariationModel } from '../variation.model'
   styleUrls: ['./variation-list.component.css']
 })
 export class VariationListComponent implements OnInit {
+
+  shouldShowLoader = true;
   variations: VariationModel[];
   sub: any;
 
@@ -25,11 +27,11 @@ export class VariationListComponent implements OnInit {
     this.sub = this.route.params
       .mergeMap(params => {
         // In a real app: dispatch action to load the details here.
-        console.log(params);
-        let {serviceId, locationId} = params;
+        let { serviceId, locationId } = params;
         return this.variationService.get({serviceId, locationId, companyId});
       })
       .subscribe(v => {
+        this.shouldShowLoader = false;
         this.variations = v;
       });
   }
