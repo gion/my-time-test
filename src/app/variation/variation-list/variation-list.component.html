@@ -1,3 +1,9 @@
-<p>
-  variation-list works!
-</p>
+<h2 class="title">Please choose a Variation</h2>
+<md-nav-list class="content">
+    <variation-item
+      *ngFor="let variation of variations"
+      [variation]=variation>
+    </variation-item>
+</md-nav-list>
+<md-spinner *ngIf="shouldShowLoader"></md-spinner>
+

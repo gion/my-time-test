@@ -1,6 +1,8 @@
-<h2 class="title">Please choose a Location</h2>
-<ul class="content">
-  <li *ngFor="let location of locations">
-      <location-item [location]=location></location-item>
-  </li>
-</ul>
+<h2>Please choose a Location</h2>
+<md-nav-list>
+  <location-item
+    *ngFor="let location of locations"
+    [location]=location>
+  </location-item>
+</md-nav-list>
+<md-spinner *ngIf="shouldShowLoader"></md-spinner>

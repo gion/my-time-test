@@ -11,17 +11,17 @@ import { VariationModel } from './variation.model';
 export class VariationService {
   constructor(private proxy: ProxyService) {}
 
-    private getVariationUrl({variationId, serviceId, locationId}): string {
-       return `${dataBaseUrl}${variationId}/variations.json?service_id=${serviceId}&location_id=${locationId}`;
+    private getVariationUrl({companyId, serviceId, locationId}): string {
+       return `${dataBaseUrl}${companyId}/variations.json?service_id=${serviceId}&location_id=${locationId}`;
     }
 
-    private toServiceModelArray(input: object): VariationModel[]{
+    private toVariationModelArray(input: object): VariationModel[]{
       return <VariationModel[]> input;
     }
 
-    get({variationId, serviceId, locationId}): Observable<VariationModel[]> {
+    get({companyId, serviceId, locationId}): Observable<VariationModel[]> {
       return this.proxy
-        .get(this.getVariationUrl({variationId, serviceId, locationId}))
-        .map(this.toServiceModelArray)
+        .get(this.getVariationUrl({companyId, serviceId, locationId}))
+        .map(this.toVariationModelArray)
     }
   }
