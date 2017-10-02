@@ -8,7 +8,7 @@ import locationMocks from '../mocks';
 
 @Component({
   selector: 'test-wrapper',
-  template: '<location-item [location]=location></location-item>',
+  template: '<location-item [location]=location></location-item>'
 })
 class TestWrapperComponent {
   location = locationMocks[0];

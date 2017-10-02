@@ -1,25 +1,27 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// @TODO: follow the other components spec fiels and update this one as well
 
-import { VariationListComponent } from './variation-list.component';
+// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-describe('VariationListComponent', () => {
-  let component: VariationListComponent;
-  let fixture: ComponentFixture<VariationListComponent>;
+// import { VariationListComponent } from './variation-list.component';
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ VariationListComponent ]
-    })
-    .compileComponents();
-  }));
+// describe('VariationListComponent', () => {
+//   let component: VariationListComponent;
+//   let fixture: ComponentFixture<VariationListComponent>;
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(VariationListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(async(() => {
+//     TestBed.configureTestingModule({
+//       declarations: [ VariationListComponent ]
+//     })
+//     .compileComponents();
+//   }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(VariationListComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
+
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

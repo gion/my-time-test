@@ -18,7 +18,7 @@ const LocationServiceMock = {
   template: '<location-list></location-list>',
 })
 class TestWrapperComponent {
-  locations = locationMocks[0];
+  locations = locationMocks;
 }
 
 describe('LocationListComponent', () => {
